@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "stux",
+  "compatibility_date": "2026-05-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./out",
+  },
+  "build": {
+    "command": "npm run build",
+  },
+  "observability": {
+    "enabled": true,
+  },
+}
