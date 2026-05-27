@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { ChevronLeft, Play, Pause, Square, Flame, Target } from "lucide-react";
 import { useStuxStore } from "@/hooks/use-stux-store";
 import { MARKS, MarkLevel } from "@/lib/constants";
@@ -13,6 +13,14 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function TimerPage() {
+  return (
+    <Suspense fallback={null}>
+      <TimerInner />
+    </Suspense>
+  );
+}
+
+function TimerInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { targetMinutes, setTarget, addSession, updateHeat } = useStuxStore();
