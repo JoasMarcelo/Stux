@@ -1,17 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "stux",
-  "compatibility_date": "2026-05-26",
+  "compatibility_date": "2026-05-27",
   "compatibility_flags": ["nodejs_compat"],
-  "assets": {
-    "directory": "./out",
-    "binding": "ASSETS",
-    "not_found_handling": "single-page-application"
-  },
-  "build": {
-    "command": "npm run build"
-  },
-  "observability": {
-    "enabled": true
-  }
+  "pages_build_output_dir": "./out"
 }
